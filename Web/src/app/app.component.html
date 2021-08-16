@@ -1,0 +1,12 @@
+<nav *ngIf="user">
+    <div>
+        <a routerLink="/">User</a>
+        <a routerLink="/admin" *ngIf="isAdmin">Admin</a>
+        <a routerLink="/lead" *ngIf="isAdmin || isLead">Lead</a>
+        <a (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

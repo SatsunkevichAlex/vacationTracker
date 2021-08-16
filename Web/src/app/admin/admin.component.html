@@ -1,0 +1,6 @@
+<h2>
+    Admins page
+    <ul *ngIf="users">
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</h2>
